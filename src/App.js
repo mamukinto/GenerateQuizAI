@@ -3,6 +3,8 @@ import { createWorker } from 'tesseract.js';
 import * as pdfjsLib from 'pdfjs-dist';
 import mammoth from 'mammoth';
 
+pdfjsLib.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.mjs`;
+
 const OPENAI_API_KEY = 'take from .env or just copy here idk'
 
 const styles = {
